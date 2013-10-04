@@ -1,0 +1,2 @@
+### CloudYara
+* Django app
