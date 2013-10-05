@@ -1,0 +1,7 @@
+# base requirements:
+django==1.5.4
+django-forms-bootstrap
+gunicorn
+South
+pbdeploy
+python-memcached

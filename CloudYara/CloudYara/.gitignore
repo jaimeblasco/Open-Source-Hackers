@@ -1,0 +1,6 @@
+*.pyc
+env
+run
+*.db
+settings_gunicorn.py
+public
