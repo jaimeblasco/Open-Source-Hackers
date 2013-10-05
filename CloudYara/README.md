@@ -11,3 +11,7 @@ On production:
 1. cd Open-Source-Hackers/CloudYara/CloudYara
 1. source env/bin/activate
 1. follow above instructions 2+
+
+
+Public site:
+http://cloudyara.com/
