@@ -6,3 +6,4 @@ South
 pbdeploy
 python-memcached
 django-taggit
+django_compressor

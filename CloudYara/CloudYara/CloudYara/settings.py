@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'south',
     'gunicorn',
     'cyapp',
+    'compressor',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
