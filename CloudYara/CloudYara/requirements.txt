@@ -7,3 +7,5 @@ pbdeploy
 python-memcached
 django-taggit
 django_compressor
+yara
+yara-tool
