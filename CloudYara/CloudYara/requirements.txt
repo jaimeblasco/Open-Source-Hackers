@@ -8,6 +8,6 @@ python-memcached
 django-taggit
 django_compressor
 yara
-yara-tool
+yaratool
 -e git://github.com/MITRECND/yaraprocessor.git#egg=yaraprocessor
 python-social-auth
