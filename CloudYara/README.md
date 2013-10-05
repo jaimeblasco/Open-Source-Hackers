@@ -4,6 +4,7 @@
 1. cd CloudYara
 1. pip install -r requirements.txt
 1. pbdeploy
+1. you are running on localhost:17001
 
 On production:
 1. sudo su - web
