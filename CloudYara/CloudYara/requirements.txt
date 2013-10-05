@@ -9,3 +9,4 @@ django-taggit
 django_compressor
 yara
 yara-tool
+-e git://github.com/MITRECND/yaraprocessor.git#egg=yaraprocessor
