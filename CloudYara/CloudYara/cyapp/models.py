@@ -17,7 +17,7 @@ class Rule(models.Model):
     description = models.CharField(max_length=200)
     reported_by_user = models.ForeignKey(User, blank=True, null=True)
     classification = models.CharField(max_length=100, choices=CLASSIFICATION_CHOICES, blank=True, null=True)
-    version = models.CharField(max_length=20)
+    version = models.IntegerField()
     valid_rule = models.BooleanField()
     tags = TaggableManager()
 
