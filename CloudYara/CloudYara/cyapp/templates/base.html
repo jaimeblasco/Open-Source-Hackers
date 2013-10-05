@@ -17,7 +17,7 @@
             <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
         {% endcompress %}
         {% compress css %}
-        <style type="text/css">.logged-{% if request.user.is_authenticated %}out{% else %}"in"{% endif %} { display:none !important; }</style>
+        <style type="text/css">.logged-{% if request.user.is_authenticated %}out{% else %}in{% endif %} { display:none !important; }</style>
             {% block extra_css %}{% endblock %}
         {% endcompress %}
 
@@ -44,7 +44,14 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Login / Signup</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url "social:begin" "github" %}">with Github</a></li>
+                  <!--<li><a href="{% url "social:begin" "twitter" %}">with Twitter</a></li>-->
+                </ul>
+              </li>
+              <li class="logged-in"><a href="#">Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </nav>

@@ -3,7 +3,6 @@ from taggit.managers import TaggableManager
 
 from django.contrib.auth.models import User
 
-
 CLASSIFICATION_CHOICES = (
     ('public', 'Public'),
     ('private', 'Private'),
@@ -21,3 +20,9 @@ class Rule(models.Model):
     valid_rule = models.BooleanField()
     tags = TaggableManager()
 
+"""
+class RuleVersion(models.Model):
+    rule = models.ForeignKey(Rule)
+    changelog = models.CharField()
+    source = models.CharField()
+"""

@@ -4,3 +4,4 @@ run
 *.db
 settings_gunicorn.py
 public
+*.secret

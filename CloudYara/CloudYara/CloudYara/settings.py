@@ -141,7 +141,30 @@ INSTALLED_APPS = (
     'gunicorn',
     'cyapp',
     'compressor',
+    'social.apps.django_app.default',
+    'taggit',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+)
+
+AUTHENTICATION_BACKENDS = (
+      'social.backends.github.GithubOAuth2',
+      'social.backends.twitter.TwitterOAuth',
+)
+
+SOCIAL_AUTH_GITHUB_KEY = '9a75d4ed25d13243998b'
+SOCIAL_AUTH_GITHUB_SECRET = ''
+GITHUB_SECRET_PATH = os.path.join(PROJECT_DIR, "github.secret")
+if os.path.exists(GITHUB_SECRET_PATH):
+    SOCIAL_AUTH_GITHUB_SECRET = open(GITHUB_SECRET_PATH).read().strip()
+else:
+    print "WARNING: no github.secret file found, unable to use Github OAuth2."
+
+SOCIAL_AUTH_TWITTER_KEY = ''
+SOCIAL_AUTH_TWITTER_SECRET = ''
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
